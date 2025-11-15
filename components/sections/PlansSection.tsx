@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Container from '../ui/Container';
@@ -6,6 +8,20 @@ import { PRICING_PLANS } from '@/lib/constants';
 import { FaCheck, FaStar, FaCalendarCheck } from 'react-icons/fa';
 
 const PlansSection: React.FC = () => {
+  const handlePlanClick = (planId: string) => {
+    // URLにプランパラメータを追加
+    window.history.pushState({}, '', `#contact?plan=${planId}`);
+
+    // お問い合わせフォームへスムーススクロール
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // イベントをディスパッチしてContactSectionに通知
+    window.dispatchEvent(new Event('hashchange'));
+  };
+
   return (
     <section id="pricing" className="py-16 md:py-24 bg-primary">
       <Container>
@@ -35,16 +51,17 @@ const PlansSection: React.FC = () => {
               )}
 
               {/* ヘッダー */}
-              <div className={`p-8 text-center ${plan.popular ? 'bg-gradient-to-br from-gold/30 to-gold/10' : 'bg-gradient-to-br from-primary/15 to-primary/5'}`}>
+              <div className={`p-8 pt-12 text-center ${plan.popular ? 'bg-gradient-to-br from-gold/30 to-gold/10' : 'bg-gradient-to-br from-primary/15 to-primary/5'}`}>
                 <h3 className="text-3xl font-bold mb-2 text-primary">
                   {plan.name}
                 </h3>
                 <p className="text-gray-800 font-semibold mb-4">{plan.description}</p>
                 <div className="mb-4">
                   <span className="text-4xl md:text-5xl font-bold text-accent">
-                    {plan.priceText.split('（')[0]}
+                    {plan.price.toLocaleString()}
                   </span>
-                  <span className="text-gray-700 text-sm ml-1 font-semibold">（税込）</span>
+                  <span className="text-xl md:text-2xl font-bold text-accent">円</span>
+                  <span className="text-gray-700 text-lg md:text-xl ml-1 font-semibold">（税込）</span>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <Image
@@ -74,7 +91,7 @@ const PlansSection: React.FC = () => {
                 </ul>
 
                 <Button
-                  href="#contact"
+                  onClick={() => handlePlanClick(plan.id)}
                   variant={plan.popular ? 'primary' : 'outline'}
                   size="md"
                   fullWidth
@@ -102,7 +119,7 @@ const PlansSection: React.FC = () => {
               '出版後の修正サポート（初回のみ）',
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/20 backdrop-blur-sm p-3 rounded-lg">
-                <FaCheck className="text-gold-dark text-xl shrink-0" />
+                <FaCheck className="text-gold-light text-xl shrink-0" />
                 <span className="text-white font-semibold">{item}</span>
               </div>
             ))}

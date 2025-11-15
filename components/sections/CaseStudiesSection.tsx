@@ -186,7 +186,13 @@ const CaseStudiesSection: React.FC = () => {
                   {caseStudy.image && (
                     <div>
                       <div className="relative w-full aspect-square rounded-lg overflow-hidden">
-                        <Image src={caseStudy.image} alt={caseStudy.title} fill className="object-cover" />
+                        <Image
+                          src={caseStudy.image}
+                          alt={caseStudy.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover"
+                        />
                       </div>
                     </div>
                   )}

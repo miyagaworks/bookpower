@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Container from '../ui/Container';
-import { FaChevronDown, FaChevronUp, FaQuestionCircle } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -10,7 +10,7 @@ const FAQSection: React.FC = () => {
   const faqs = [
     {
       question: '本当に1ヶ月で出版できますか？',
-      answer: 'はい、可能です。オンライン面談は合計2〜3時間のみで、あとはメール・チャットで完結。原稿作成からデザイン、出版まで全てプロにお任せいただけるので、最短1ヶ月で出版できます。ただし、内容の複雑さや修正回数によっては、もう少し時間がかかる場合もあります。'
+      answer: 'はい、可能です。オンライン面談は合計2〜3時間のみで、あとはメール・チャットで完結。原稿作成からデザイン、出版まで全てプロにお任せいただけます。よって、最短1ヶ月で出版できます。ただし、内容の複雑さや修正回数によっては、もう少し時間がかかる場合もあります。'
     },
     {
       question: '文章を書くのが苦手ですが大丈夫ですか？',
@@ -58,12 +58,9 @@ const FAQSection: React.FC = () => {
     <section id="faq" className="py-16 md:py-24 bg-gradient-to-b from-white via-background to-white">
       <Container>
         <div className="text-center mb-12 md:mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <FaQuestionCircle className="text-5xl text-gold" />
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
-              よくある質問
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            よくある質問
+          </h2>
           <p className="text-xl md:text-2xl text-gray-800 font-semibold max-w-3xl mx-auto">
             出版に関する疑問にお答えします
           </p>
@@ -121,7 +118,7 @@ const FAQSection: React.FC = () => {
             無料相談で、どんな質問にもお答えします
           </p>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            あなたの状況に合わせた最適なプランをご提案いたします。まずはお気軽にご相談ください。
+            あなたの状況に合わせた最適なプランをご提案いたします。
           </p>
         </div>
       </Container>

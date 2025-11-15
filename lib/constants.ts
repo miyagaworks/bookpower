@@ -30,10 +30,9 @@ export const SITE_INFO = {
   subtitle: 'あなたの名前が、Amazonに載る',
   description: '最短2週間、55,000円（税込）から。経営者専門の出版サポートサービス。契約率2.3倍、採用応募10倍の実績。',
   url: 'https://bookpower.jp',
-  companyName: '株式会社千里眼システムズ',
-  companyAddress: '東京都港区六本木1-4-5 アークヒルズサウスタワー 16F',
-  companyPhone: '03-1234-5678', // 実際の番号に変更
-  companyEmail: 'info@bookpower.jp',
+  companyName: '株式会社Senrigan',
+  companyAddress: '広島県広島市安佐南区山本2-3-35',
+  companyPhone: '082-209-0181',
 } as const;
 
 // 料金プラン
@@ -50,7 +49,6 @@ export const PRICING_PLANS = [
       '取材1回（1時間）',
       'ライティング（1.5〜3万文字）',
       '基本的な表紙デザイン',
-      '出版手続きサポート',
     ],
     pages: '50〜80ページ',
     delivery: '最短2週間',
@@ -68,7 +66,6 @@ export const PRICING_PLANS = [
       'ライティング（3〜6万文字）',
       'オリジナル表紙デザイン',
       '編集・校正',
-      '出版手続き代行',
     ],
     pages: '100〜150ページ',
     delivery: '3〜4週間',
@@ -87,8 +84,6 @@ export const PRICING_PLANS = [
       'プロフェッショナル表紙デザイン',
       '徹底的な編集・校正',
       '図表・イラスト作成',
-      '出版手続き完全代行',
-      '出版後のプロモーション支援',
     ],
     pages: '150ページ〜',
     delivery: '1ヶ月〜',

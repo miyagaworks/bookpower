@@ -113,10 +113,8 @@ const ProcessSection: React.FC = () => {
                 {/* 左側：アイコンと期間 */}
                 <div className="md:col-span-2 bg-gradient-to-r from-primary to-primary-light p-8 md:p-10 pt-20 md:pt-10">
                   <div className="flex flex-col items-center text-center">
-                    <div className="mb-8">
-                      {React.cloneElement(step.icon as React.ReactElement, {
-                        className: 'text-9xl md:text-[12rem] text-gold drop-shadow-2xl'
-                      })}
+                    <div className="mb-8 text-9xl md:text-[12rem] text-gold drop-shadow-2xl">
+                      {step.icon}
                     </div>
                     <div className="inline-flex items-center gap-2 bg-gold-dark text-white px-4 py-2 rounded-full font-bold shadow-lg mb-4">
                       <FaCalendarCheck />
@@ -185,25 +183,6 @@ const ProcessSection: React.FC = () => {
           </div>
         </div>
       </Container>
-
-      {/* CTA セクション */}
-      <div className="mt-16 bg-primary py-12 md:py-16">
-        <Container>
-          <div className="text-center">
-            <p className="text-3xl md:text-5xl font-bold text-white mb-8">
-              まずは無料相談から始めましょう
-            </p>
-            <Button
-              href="#contact"
-              variant="secondary"
-              className="bg-gold hover:bg-gold-light text-kindle-black px-12 py-6 text-xl md:text-2xl font-bold rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
-              icon={<FaCalendarCheck className="text-2xl" />}
-            >
-              無料相談を申し込む
-            </Button>
-          </div>
-        </Container>
-      </div>
     </section>
   );
 };

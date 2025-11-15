@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     const adminEmail = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'noreply@bookpower.jp',
       to: 'info@bookpower.jp', // 受信用アドレス（Cloudflare Email Routingで設定）
-      subject: `【BookPower】新規お問い合わせ - ${name}様`,
+      subject: `【著力】新規お問い合わせ - ${name}様`,
       html: `
         <h2>新しいお問い合わせがありました</h2>
         <p><strong>お名前:</strong> ${name}</p>
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
         <p><strong>メッセージ:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
-        <p style="color: #666; font-size: 12px;">このメールは BookPower のお問い合わせフォームから送信されました。</p>
+        <p style="color: #666; font-size: 12px;">このメールは 著力 のお問い合わせフォームから送信されました。</p>
       `,
     });
 
@@ -46,10 +46,10 @@ export async function POST(request: NextRequest) {
     const userEmail = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'noreply@bookpower.jp',
       to: email,
-      subject: 'お問い合わせありがとうございます - BookPower',
+      subject: 'お問い合わせありがとうございます - 著力',
       html: `
         <h2>${name} 様</h2>
-        <p>この度は BookPower にお問い合わせいただき、誠にありがとうございます。</p>
+        <p>この度は 「著力」にお問い合わせいただき、誠にありがとうございます。</p>
         <p>以下の内容でお問い合わせを受け付けました。</p>
         <hr>
         <p><strong>お名前:</strong> ${name}</p>
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
         <p>担当者より2営業日以内にご連絡させていただきます。</p>
         <p>今しばらくお待ちくださいませ。</p>
         <br>
-        <p>BookPower運営チーム</p>
+        <p>著力運営チーム</p>
         <p style="color: #666; font-size: 12px;">
           このメールは自動送信されています。<br>
           ご不明な点がございましたら、本メールに返信する形でお問い合わせください。

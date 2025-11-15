@@ -12,26 +12,29 @@ const BookSlider: React.FC = () => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer || isPaused) return;
 
-    let scrollAmount = 0;
-    const scrollSpeed = 1; // ピクセル/フレーム
+    const scrollSpeed = 2; // ピクセル/フレーム
+    let animationId: number;
 
     const scroll = () => {
       if (!scrollContainer || isPaused) return;
 
-      scrollAmount += scrollSpeed;
-      scrollContainer.scrollLeft = scrollAmount;
+      scrollContainer.scrollLeft += scrollSpeed;
 
-      // スクロールが最後まで到達したらリセット
-      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-        scrollAmount = 0;
+      // 半分までスクロールしたら、シームレスに先頭に戻す
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollLeft = 0;
       }
 
-      requestAnimationFrame(scroll);
+      animationId = requestAnimationFrame(scroll);
     };
 
-    const animationId = requestAnimationFrame(scroll);
+    animationId = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(animationId);
+    return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
   }, [isPaused]);
 
   // 書籍リストを2回繰り返して無限スクロール効果

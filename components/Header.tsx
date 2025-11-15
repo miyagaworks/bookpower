@@ -47,10 +47,18 @@ const Header: React.FC = () => {
 
             {/* デスクトップナビゲーション */}
             <nav className="hidden lg:flex items-center">
+              <Link
+                href="/"
+                className="relative text-gray-800 hover:text-primary transition-all text-sm xl:text-base whitespace-nowrap px-3 xl:px-4 py-2 group"
+              >
+                トップページ
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-white via-primary-light to-white group-hover:w-3/4 transition-all duration-300"></span>
+              </Link>
+              <div className="h-4 w-px bg-gray-300"></div>
               {NAV_ITEMS.map((item, index) => (
                 <React.Fragment key={item.href}>
                   <a
-                    href={item.href}
+                    href={`/${item.href}`}
                     className="relative text-gray-800 hover:text-primary transition-all text-sm xl:text-base whitespace-nowrap px-3 xl:px-4 py-2 group"
                   >
                     {item.label}
@@ -144,10 +152,17 @@ const Header: React.FC = () => {
                 style={{ zIndex: 2 }}
               >
                 <div className="ml-auto max-w-[60%] space-y-4">
+                  <Link
+                    href="/"
+                    className="block text-gray-900 text-lg hover:text-primary transition-colors py-2 text-right font-bold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    トップページ
+                  </Link>
                   {NAV_ITEMS.map((item) => (
                     <a
                       key={item.href}
-                      href={item.href}
+                      href={`/${item.href}`}
                       className="block text-gray-900 text-lg hover:text-primary transition-colors py-2 text-right"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >

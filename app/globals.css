@@ -68,6 +68,17 @@
   strong, b {
     font-weight: 700;
   }
+
+  /* ルビと漢字の間のスペース調整 */
+  ruby.ruby-spaced {
+    ruby-position: under;
+    ruby-position: over;
+  }
+
+  ruby.ruby-spaced rt {
+    padding-bottom: 0.3em;
+    line-height: 1;
+  }
 }
 
 @layer components {
@@ -109,15 +120,28 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
 
   .book-scroll {
-    animation: book-scroll 20s linear infinite;
+    animation: book-scroll 10s linear infinite;
   }
 
   .book-scroll:hover {
     animation-play-state: paused;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in;
   }
 }

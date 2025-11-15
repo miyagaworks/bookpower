@@ -5,7 +5,10 @@ import { FaQuoteRight } from 'react-icons/fa';
 
 const BenefitsSection: React.FC = () => {
   return (
-    <section id="benefits" className="py-16 md:py-24 bg-primary text-white">
+    <section
+      id="benefits"
+      className="py-14 md:py-20 md:pb-30 bg-primary text-white"
+    >
       <Container>
         <div className="text-center mb-12 md:mb-16">
           <h2
@@ -30,34 +33,35 @@ const BenefitsSection: React.FC = () => {
             </span>
             <span className="block md:inline">３つの革命</span>
           </h2>
-          <p className="text-2xl md:text-3xl font-bold max-w-3xl mx-auto text-left md:text-center px-4 md:px-0">
+          <p className="text-2xl md:text-3xl font-bold max-w-3xl mx-auto md:text-center px-4 md:px-0 text-justify">
             著力を手に入れると、あなたのビジネスに「3つの革命」が起こります。
           </p>
         </div>
 
-        <div className="space-y-12 md:space-y-16">
+        <div className="space-y-12 md:space-y-16 text-justify">
           {/* 革命1：権威性（旧革命2） */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+                <h3 className="text-2xl md:text-4xl font-bold mb-6 text-primary">
                   営業力が劇的に上がる
                 </h3>
                 <p className="text-xl md:text-2xl text-gray-900 font-bold leading-relaxed mb-6">
                   権威性という最強の武器。
                 </p>
                 {/* 画像: 800×400px (2:1) */}
-                <div className="relative w-full aspect-[2/1] rounded-lg overflow-visible">
-                  <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden">
+                  <div className="absolute inset-0">
                     <Image
                       src="/images/revolution/revolution1.png"
                       alt="営業力が劇的に上がる"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
                   <div
-                    className="absolute -left-6 -bottom-10 font-bold text-white/50 italic leading-none"
+                    className="absolute -right-1 -bottom-10 font-bold text-white/70 italic leading-none"
                     style={{
                       fontFamily: "serif",
                       fontSize: "18rem",
@@ -127,24 +131,25 @@ const BenefitsSection: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+                <h3 className="text-2xl md:text-4xl font-bold mb-6 text-primary">
                   商品・サービスが進化する
                 </h3>
                 <p className="text-xl md:text-2xl text-gray-900 font-bold leading-relaxed mb-6">
                   事業理解が驚くほど深まる。
                 </p>
                 {/* 画像: 800×400px (2:1) */}
-                <div className="relative w-full aspect-[2/1] rounded-lg overflow-visible">
-                  <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden">
+                  <div className="absolute inset-0">
                     <Image
                       src="/images/revolution/revolution2.png"
                       alt="商品・サービスが進化する"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
                   <div
-                    className="absolute -left-6 -bottom-10 font-bold text-white/40 italic leading-none"
+                    className="absolute -right-1 -bottom-10 font-bold text-white/70 italic leading-none"
                     style={{
                       fontFamily: "serif",
                       fontSize: "18rem",
@@ -208,24 +213,25 @@ const BenefitsSection: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+                <h3 className="text-2xl md:text-4xl font-bold mb-6 text-primary">
                   ビジネスモデル自体が変わる
                 </h3>
                 <p className="text-xl md:text-2xl text-gray-900 font-bold leading-relaxed mb-6">
                   「待ち」の営業が可能になる。
                 </p>
                 {/* 画像: 800×400px (2:1) */}
-                <div className="relative w-full aspect-[2/1] rounded-lg overflow-visible">
-                  <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden">
+                  <div className="absolute inset-0">
                     <Image
                       src="/images/revolution/revolution3.png"
                       alt="ビジネスモデル自体が変わる"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
                   <div
-                    className="absolute -left-6 -bottom-10 font-bold text-white/60 italic leading-none"
+                    className="absolute -right-1 -bottom-10 font-bold text-white/70 italic leading-none"
                     style={{
                       fontFamily: "serif",
                       fontSize: "18rem",

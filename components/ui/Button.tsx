@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 
 type ButtonVariant = 'primary' | 'accent' | 'kindle' | 'outline';
-type ButtonSize = 'sm' | 'md' | 'lg';
+type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -11,6 +13,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
+  target?: string;
+  download?: boolean | string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +25,8 @@ const Button: React.FC<ButtonProps> = ({
   href,
   icon,
   iconPosition = 'left',
+  target,
+  download,
   className = '',
   ...props
 }) => {
@@ -37,6 +43,7 @@ const Button: React.FC<ButtonProps> = ({
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
+    xl: 'px-10 py-5 text-xl',
   };
 
   const widthStyle = fullWidth ? 'w-full' : '';
@@ -53,7 +60,12 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={combinedClassName}>
+      <a
+        href={href}
+        className={combinedClassName}
+        target={target}
+        download={download}
+      >
         {content}
       </a>
     );
