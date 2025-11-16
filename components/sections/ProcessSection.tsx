@@ -111,18 +111,34 @@ const ProcessSection: React.FC = () => {
 
               <div className="md:grid md:grid-cols-5 md:gap-6">
                 {/* 左側：アイコンと期間 */}
-                <div className="md:col-span-2 bg-gradient-to-r from-primary to-primary-light p-8 md:p-10 pt-20 md:pt-10">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-8 text-9xl md:text-[12rem] text-gold drop-shadow-2xl">
-                      {step.icon}
-                    </div>
-                    <div className="inline-flex items-center gap-2 bg-gold-dark text-white px-4 py-2 rounded-full font-bold shadow-lg mb-4">
-                      <FaCalendarCheck />
+                <div className="md:col-span-2 bg-gradient-to-r from-primary to-primary-light py-8 px-4 md:p-10 flex items-center justify-center">
+                  <div className="flex flex-col items-center text-center w-full">
+                    {/* 期間バッジ */}
+                    <div className="inline-flex items-center gap-2 bg-gold-dark text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full font-bold text-sm md:text-base shadow-lg mb-3 md:mb-0 md:hidden">
+                      <FaCalendarCheck className="text-sm md:text-base" />
                       <span>{step.duration}</span>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                      {step.title}
-                    </h3>
+
+                    {/* アイコンとタイトル（横並び） */}
+                    <div className="flex items-center justify-center gap-4 md:flex-col">
+                      <div className="text-3xl md:text-[12rem] text-gold drop-shadow-2xl shrink-0">
+                        {step.icon}
+                      </div>
+                      <h3 className="text-xl md:text-3xl font-bold text-white md:hidden">
+                        {step.title}
+                      </h3>
+                    </div>
+
+                    {/* PC用：期間とタイトル */}
+                    <div className="hidden md:block md:mb-8">
+                      <div className="inline-flex items-center gap-2 bg-gold-dark text-white px-4 py-2 rounded-full font-bold text-base shadow-lg mb-4">
+                        <FaCalendarCheck className="text-base" />
+                        <span>{step.duration}</span>
+                      </div>
+                      <h3 className="text-3xl font-bold text-white">
+                        {step.title}
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
