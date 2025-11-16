@@ -191,8 +191,8 @@ ${formData.phone ? `【電話番号】\n${formData.phone}\n\n` : ''}${formData.b
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
-          {/* 左側：フォーム */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-2 border-gold">
+          {/* 左側：フォーム（スマホでは最後に表示） */}
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-2 border-gold order-4 md:order-1">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
               お問い合わせフォーム
             </h3>
@@ -384,30 +384,9 @@ ${formData.phone ? `【電話番号】\n${formData.phone}\n\n` : ''}${formData.b
             </form>
           </div>
 
-          {/* 右側：情報 */}
-          <div className="flex flex-col justify-between h-full gap-6">
-            <div className="bg-white/10 rounded-2xl p-6 border-2 border-white/20">
-              <h3 className="text-2xl font-bold mb-4 text-white">
-                こんな方はぜひご相談ください
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "本を出版して権威性を高めたい",
-                  "忙しくて時間がないが出版したい",
-                  "文章を書くのが苦手だが著者になりたい",
-                  "ビジネスを次のステージに進めたい",
-                  "競合との差別化を図りたい",
-                  "採用や営業に効果的なツールが欲しい",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <FaCheckCircle className="text-gold text-xl mt-1 shrink-0" />
-                    <span className="text-white font-semibold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-gold to-gold-dark rounded-2xl p-6 shadow-xl">
+          {/* 右側：情報（スマホでは順番を変更） */}
+          <div className="flex flex-col justify-between h-full gap-6 md:order-2">
+            <div className="bg-gradient-to-br from-gold to-gold-dark rounded-2xl p-6 shadow-xl order-1">
               <h3 className="text-2xl font-bold mb-4 text-kindle-black">
                 無料相談の流れ
               </h3>
@@ -439,8 +418,29 @@ ${formData.phone ? `【電話番号】\n${formData.phone}\n\n` : ''}${formData.b
               </div>
             </div>
 
+            <div className="bg-white/10 rounded-2xl p-6 border-2 border-white/20 order-2">
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                こんな方はぜひご相談ください
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "本を出版して権威性を高めたい",
+                  "忙しくて時間がないが出版したい",
+                  "文章を書くのが苦手だが著者になりたい",
+                  "ビジネスを次のステージに進めたい",
+                  "競合との差別化を図りたい",
+                  "採用や営業に効果的なツールが欲しい",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <FaCheckCircle className="text-gold text-xl mt-1 shrink-0" />
+                    <span className="text-white font-semibold">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* 代表者プロフィール */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex-1">
+            <div className="bg-white rounded-2xl shadow-xl p-6 flex-1 order-3">
               <h3 className="text-2xl font-bold text-primary mb-4 text-center">
                 代表者プロフィール
               </h3>
