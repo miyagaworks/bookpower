@@ -127,26 +127,41 @@ const HeroSection: React.FC = () => {
         />
       </div>
 
-      <Container className="relative z-10 w-full">
-        <div className="relative py-12 md:py-16 lg:py-20">
-          {/* 画像（PCのみ表示・最背面） */}
-          <div
-            className="hidden lg:block absolute left-[20%] -translate-x-1/2 pointer-events-none"
-            style={{ zIndex: -1, top: "30px", height: "130%" }}
-          >
-            <Image
-              src="/images/hero/hero_img.png"
-              alt="Hero Image"
-              width={1000}
-              height={1920}
-              className="h-full w-auto object-contain object-top"
-              priority
-            />
-          </div>
+      {/* 背景画像：左側（PCのみ - 1280px以上） */}
+      <div
+        className="hidden xl:block absolute left-[5%] pointer-events-none"
+        style={{ zIndex: 1, top: "100px", height: "95vh", maxHeight: "1100px" }}
+      >
+        <Image
+          src="/images/hero/hero_img.png"
+          alt="Hero Image Left"
+          width={1000}
+          height={1920}
+          className="h-full w-auto object-contain object-top"
+          priority
+        />
+      </div>
 
-          {/* テキストコンテンツ */}
-          <div className="relative z-10">
-            <div className="text-white max-w-4xl mx-auto lg:ml-auto lg:mr-6 lg:w-3/5">
+      {/* 背景画像：右側（PCのみ - 1280px以上） */}
+      <div
+        className="hidden xl:block absolute right-[5%] pointer-events-none"
+        style={{ zIndex: 1, top: "200px", height: "75vh", maxHeight: "800px" }}
+      >
+        <Image
+          src="/images/hero/bookimg.png"
+          alt="Hero Image Right"
+          width={630}
+          height={800}
+          className="h-full w-auto object-contain object-top"
+          priority
+        />
+      </div>
+
+      <div className="relative w-full" style={{ zIndex: 20 }}>
+        <Container>
+          <div className="relative py-12 md:py-16 lg:py-20">
+            {/* テキストコンテンツ */}
+            <div className="text-white w-full max-w-4xl mx-auto lg:w-[760px]">
               {/* メインキャッチコピー */}
               <div className="mb-2 md:mb-4 flex items-end gap-2 md:gap-6 lg:gap-6 justify-center">
                 <h1
@@ -288,8 +303,8 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       {/* あなたの著書が並ぶ未来セクション */}
       <div className="relative z-10 py-12 md:py-16 bg-primary-dark">
