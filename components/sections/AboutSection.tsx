@@ -9,14 +9,12 @@ const AboutSection: React.FC = () => {
     <section id="about" className="py-16 md:py-24 bg-gradient-to-b from-white via-background to-white">
       <style jsx>{`
         @media (max-width: 767px) {
-          ruby rt {
+          h2 ruby rt {
             margin-bottom: -0.5em;
           }
         }
-        @media (min-width: 768px) {
-          ruby rt {
-            margin-bottom: 0.2em;
-          }
+        ruby rt {
+          margin-bottom: 0.2em;
         }
       `}</style>
       <Container>
