@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Container from './ui/Container';
 import { SITE_INFO, NAV_ITEMS } from '@/lib/constants';
@@ -8,6 +10,16 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-(--color-foreground) text-gray-200">
+      <style jsx>{`
+        @media (max-width: 767px) {
+          h3 ruby rt {
+            margin-bottom: -0.5em;
+          }
+        }
+        ruby rt {
+          margin-bottom: 0.3em;
+        }
+      `}</style>
       <Container>
         <div className="py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* サイトマップ */}
@@ -57,7 +69,6 @@ const Footer: React.FC = () => {
                   style={{
                     fontSize: "0.4em",
                     fontWeight: 600,
-                    marginBottom: "0.3em",
                   }}
                 >
                   ちょりょく

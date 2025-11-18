@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Container from '../ui/Container';
@@ -9,6 +11,16 @@ const AuthoritySection: React.FC = () => {
       id="authority"
       className="py-16 md:py-2 bg-gradient-to-b from-white via-background to-white"
     >
+      <style jsx>{`
+        @media (max-width: 767px) {
+          h3 ruby rt {
+            margin-bottom: -0.5em;
+          }
+        }
+        ruby rt {
+          margin-bottom: 0.3em;
+        }
+      `}</style>
       <Container>
         {/* セクション1: オープニング */}
         <div className="mb-16 md:mb-24">
@@ -132,7 +144,7 @@ const AuthoritySection: React.FC = () => {
 
           <div className="bg-white rounded-2xl shadow-xl p-12 md:p-12 border-2 border-primary/10">
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
-              一般認識のギャップが、著力の源泉
+              一般認識のギャップが、<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600 }}>ちょりょく</rt></ruby>の源泉
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
