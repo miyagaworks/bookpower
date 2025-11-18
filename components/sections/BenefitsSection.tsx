@@ -31,20 +31,20 @@ const BenefitsSection: React.FC = () => {
               </ruby>
               」がもたらす
             </span>
-            <span className="block md:inline">３つの革命</span>
+            <span className="block md:inline">３つの変化</span>
           </h2>
           <p className="text-2xl md:text-3xl font-bold max-w-3xl mx-auto md:text-center px-4 md:px-0 text-justify">
-            著力を手に入れると、あなたのビジネスに「3つの革命」が起こります。
+            著力を手に入れると、あなたのビジネスに「3つの変化」が起こります。
           </p>
         </div>
 
         <div className="space-y-12 md:space-y-16 text-justify">
-          {/* 革命1：権威性（旧革命2） */}
+          {/* 変化1：権威性（旧変化2） */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
                 <h3 className="text-2xl md:text-4xl font-bold mb-6 text-primary">
-                  営業力が劇的に上がる
+                  営業力が大きく向上する
                 </h3>
                 <p className="text-xl md:text-2xl text-gray-900 font-bold leading-relaxed mb-6">
                   権威性という最強の武器。
@@ -54,7 +54,7 @@ const BenefitsSection: React.FC = () => {
                   <div className="absolute inset-0">
                     <Image
                       src="/images/revolution/revolution1.png"
-                      alt="営業力が劇的に上がる"
+                      alt="営業力が大きく向上する"
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
@@ -127,7 +127,7 @@ const BenefitsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* 革命2：事業理解（旧革命1） */}
+          {/* 変化2：事業理解（旧変化1） */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
@@ -209,7 +209,7 @@ const BenefitsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* 革命3：数字 */}
+          {/* 変化3：数字 */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gold">
             <div className="md:grid md:grid-cols-2 md:gap-0">
               <div className="p-8 md:p-12 bg-gradient-to-br from-gold/30 to-gold/10">
@@ -255,7 +255,7 @@ const BenefitsSection: React.FC = () => {
                       <span className="text-accent text-xl font-bold">
                         3.8倍
                       </span>
-                      に跳ね上がった
+                      に増えました
                     </span>
                   </li>
                   <li className="flex items-center gap-3 bg-white/60 p-2 rounded-lg">
@@ -288,7 +288,7 @@ const BenefitsSection: React.FC = () => {
                         保険代理店経営者
                       </p>
                       <p className="text-gray-700 text-sm italic text-justify">
-                        年間30件以上の講演依頼が来るようになり、飛び込み営業から完全に卒業できた。すべて「本を出版した」というただ一つの行動から始まった
+                        年間30件以上の講演依頼が来るようになり、飛び込み営業をする必要がなくなりました。すべて「本を出版した」というただ一つの行動から始まった
                       </p>
                     </div>
                   </div>

@@ -858,7 +858,7 @@ const PersuasiveSection: React.FC = () => {
               最短<span className="text-gold font-bold text-3xl">1ヶ月</span>、<span className="text-gold font-bold text-3xl">5万円台</span>から出版は可能です
             </p>
             <p className="text-lg text-white/90 mt-6">
-              まずは無料相談で、あなたの「説得力革命」への道を一緒に考えましょう
+              まずは無料相談で、あなたの「説得力変化」への道を一緒に考えましょう
             </p>
           </div>
         </div>

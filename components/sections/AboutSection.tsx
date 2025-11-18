@@ -8,11 +8,11 @@ const AboutSection: React.FC = () => {
       <Container>
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-            あなたは「<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, marginBottom: '0.3em' }}>ちょりょく</rt></ruby>」を知っていますか？
+            あなたは「<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, marginBottom: '0.2em' }}>ちょりょく</rt></ruby>」を知っていますか？
           </h2>
           <div className="bg-primary text-white py-6 px-8 rounded-2xl max-w-4xl mx-auto shadow-2xl">
             <p className="text-2xl md:text-5xl font-bold text-justify leading-relaxed">
-              <ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, marginBottom: '0.3em' }}>ちょりょく</rt></ruby>とは、著書を持つことで得られる<span className="text-gold text-4xl md:text-7xl">圧倒的な影響力</span>のこと
+              <ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, marginBottom: '0.3em' }}>ちょりょく</rt></ruby>とは、著書を持つことで得られる<span className="text-gold text-4xl md:text-7xl">大きな影響力</span>のこと
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
 
-        {/* なぜ今、著力が必要なのか */}
+        {/* 今、著力が注目される理由 */}
         <div className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white rounded-2xl p-8 md:p-12 shadow-2xl border-4 border-gold">
           <div className="flex items-center gap-3 mb-8">
             <FaBook className="text-4xl md:text-5xl text-gold" />

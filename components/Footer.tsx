@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             </h3>
             <p className="text-gray-200 mb-4">{SITE_INFO.subtitle}</p>
             <p className="text-gray-400 text-sm leading-relaxed text-justify mb-8">
-              著力とは、著書を持つことで得られる圧倒的な影響力のこと。本を出版することで、権威性・専門性が高まり、ビジネスを次のステージへと導きます。
+              著力とは、著書を持つことで得られる大きな影響力のこと。本を出版することで、権威性・専門性が高まり、ビジネスを次のステージへと導きます。
             </p>
 
             {/* 著力の3つの要素 */}

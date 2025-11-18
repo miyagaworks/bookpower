@@ -210,7 +210,7 @@ const HeroSection: React.FC = () => {
                       className="text-base md:text-xl lg:text-lg opacity-90 leading-relaxed text-justify"
                       style={{ fontFamily: "sans-serif" }}
                     >
-                      医者の白衣、弁護士バッジ、一流大学の学位。著者と同じ見えない権威。
+                      医者の白衣、弁護士のバッジと同じように、『著者』という肩書きにも信頼を生む力があります。
                     </p>
                   </div>
                 </div>
@@ -234,8 +234,10 @@ const HeroSection: React.FC = () => {
                   </strong>
                   から
                 </p>
-                <p className="text-base md:text-xl lg:text-xl opacity-90 leading-relaxed">
-                  あなたが思っているよりも、はるかに簡単に「著者」になれる時代
+                <p className="text-xl md:text-2xl font-bold opacity-90 leading-relaxed">
+                  思っているより、著者になることは
+                  <br className="md:hidden" />
+                  身近になっています
                 </p>
               </div>
 

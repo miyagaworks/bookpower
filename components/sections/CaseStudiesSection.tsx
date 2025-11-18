@@ -7,92 +7,114 @@ const CaseStudiesSection: React.FC = () => {
   const cases = [
     {
       icon: <FaHospital className="text-5xl text-gold" />,
-      title: '小規模整体院',
-      subtitle: 'スタッフ1人、地方都市で経営',
-      investment: '88,000円×3冊（税込264,000円）',
-      image: '/images/cases/case1.png',
+      title: "小規模整体院",
+      subtitle: "スタッフ1人、地方都市で経営",
+      investment: "88,000円×3冊（税込264,000円）",
+      image: "/images/cases/case1.png",
       before: {
-        title: '出版前',
-        items: ['月商200万円', '地域密着型のみ', 'リピート率25%', '価格競争に悩む']
+        title: "出版前",
+        items: [
+          "月商200万円",
+          "地域密着型のみ",
+          "リピート率25%",
+          "価格競争に悩む",
+        ],
       },
       after: {
-        title: '出版後（1年で）',
+        title: "出版後（1年で）",
         items: [
-          { text: 'リピート率65%（2.6倍！）', highlight: true },
-          { text: '月商750万円（3.8倍！）', highlight: true },
-          '施術料5,000円→8,000円に値上げ成功',
-          '店内ポスターで「著書3冊の先生」として認知',
-          '「この本にも書いているのですが…」が説得力に'
-        ]
+          { text: "リピート率65%（2.6倍！）", highlight: true },
+          { text: "月商750万円（3.8倍！）", highlight: true },
+          "施術料5,000円→8,000円に値上げ成功",
+          "店内ポスターで「著書3冊の先生」として認知",
+          "「この本にも書いているのですが…」が説得力に",
+        ],
       },
-      quote: '本を出版したことで、人生が変わりました。収入が増えたのはもちろんですが、それ以上に「先生」と呼ばれることの喜びを知りました'
+      quote:
+        "本を出版したことで、仕事への向き合い方が変わりました。収入が増えたのはもちろんですが、それ以上に「先生」と呼ばれることの喜びを知りました",
     },
     {
       icon: <FaLaptopCode className="text-5xl text-gold" />,
-      title: 'IT企業',
-      subtitle: '従業員20名、離職率に悩む',
-      investment: '88,000円（税込）',
-      image: '/images/cases/case2.png',
+      title: "IT企業",
+      subtitle: "従業員20名、離職率に悩む",
+      investment: "88,000円（税込）",
+      image: "/images/cases/case2.png",
       before: {
-        title: '出版前',
-        items: ['応募が少ない', '離職率30%', '社員を「作業する人」として見ていた']
+        title: "出版前",
+        items: [
+          "応募が少ない",
+          "離職率30%",
+          "社員を「作業する人」として見ていた",
+        ],
       },
       after: {
-        title: '出版後',
+        title: "出版後",
         items: [
-          { text: '応募者10倍増', highlight: true },
-          { text: '離職率30%→5%に激減', highlight: true },
-          '内定承諾率90%超',
-          '本を書く過程で会社が変わった',
-          '「本を読んで応募しました」が続出'
-        ]
+          { text: "応募者10倍増", highlight: true },
+          { text: "離職率30%→5%に激減", highlight: true },
+          "内定承諾率90%超",
+          "本を書く過程で会社が変わった",
+          "「本を読んで応募しました」が続出",
+        ],
       },
-      quote: '本を書きながら、社員一人ひとりと真剣に向き合うようになり、それぞれの得意なことを活かせるようにした。すると、離職率が下がったんです'
+      quote:
+        "本を書きながら、社員一人ひとりと真剣に向き合うようになり、それぞれの得意なことを活かせるようにした。すると、離職率が下がったんです",
     },
     {
       icon: <FaUserTie className="text-5xl text-gold" />,
-      title: '経営コンサルタント',
-      subtitle: '独立5年目、「怪しい」との戦い',
-      investment: '55,000円×3冊（税込165,000円）',
-      image: '/images/cases/case3.png',
+      title: "経営コンサルタント",
+      subtitle: "独立5年目、「怪しい」との戦い",
+      investment: "55,000円×3冊（税込165,000円）",
+      image: "/images/cases/case3.png",
       before: {
-        title: '出版前',
-        items: ['契約率わずか2%', '「コンサルタント=怪しい」', '50人会って1人契約', '初対面で警戒される']
+        title: "出版前",
+        items: [
+          "契約率わずか2%",
+          "「コンサルタント=怪しい」",
+          "50人会って1人契約",
+          "初対面で警戒される",
+        ],
       },
       after: {
-        title: '3冊出版後',
+        title: "3冊出版後",
         items: [
-          { text: '契約率12%（6倍！）', highlight: true },
-          '名刺裏に本3冊の表紙を印刷',
-          '社交辞令から「相談」に会話が変化',
-          '本を読んでいなくても権威が完成',
-          '月収30万円→100万円に'
-        ]
+          { text: "契約率12%（6倍！）", highlight: true },
+          "名刺裏に本3冊の表紙を印刷",
+          "社交辞令から「相談」に会話が変化",
+          "本を読んでいなくても権威が完成",
+          "月収30万円→100万円に",
+        ],
       },
-      quote: '3冊出版した今、もう「怪しい」とは思われません。名刺の裏に本の表紙が並んでいるだけで、「この人なら信頼できる」と思ってもらえるんです'
+      quote:
+        "3冊出版してから、初対面でも信頼していただけることが増えました。名刺の裏に本の表紙が並んでいるだけで、「この人なら信頼できる」と思ってもらえるんです",
     },
     {
       icon: <FaIndustry className="text-5xl text-gold" />,
-      title: '製造業（町工場）',
-      subtitle: '従業員10名、金属加工業',
-      investment: '88,000円（税込）',
-      image: '/images/cases/case4.png',
+      title: "製造業（町工場）",
+      subtitle: "従業員10名、金属加工業",
+      investment: "88,000円（税込）",
+      image: "/images/cases/case4.png",
       before: {
-        title: '出版前',
-        items: ['地元中小企業との取引のみ', '大手企業との縁なし', '技術力はあるが知名度なし']
+        title: "出版前",
+        items: [
+          "地元中小企業との取引のみ",
+          "大手企業との縁なし",
+          "技術力はあるが知名度なし",
+        ],
       },
       after: {
-        title: '出版後',
+        title: "出版後",
         items: [
-          '同窓会で本を見せたら紹介してもらえた',
-          { text: '受注金額が従来の10倍', highlight: true },
-          '大手企業の専務が本を読んで面談',
-          '売上の60%が大手企業との取引に',
-          '継続的な発注が実現'
-        ]
+          "同窓会で本を見せたら紹介してもらえた",
+          { text: "受注金額が従来の10倍", highlight: true },
+          "大手企業の専務が本を読んで面談",
+          "売上の60%が大手企業との取引に",
+          "継続的な発注が実現",
+        ],
       },
-      quote: '本を出版していなければ、大手企業との取引は一生実現しなかったと思います。同窓会での何気ない会話が、すべてを変えました'
-    }
+      quote:
+        "本を出版していなければ、大手企業との取引は一生実現しなかったと思います。同窓会での何気ない会話が、すべてを変えました",
+    },
   ];
 
   return (
@@ -100,7 +122,7 @@ const CaseStudiesSection: React.FC = () => {
       <Container>
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            圧倒的な成功事例
+            出版された方々の変化
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
             本を出版した経営者たちの驚きの変化
