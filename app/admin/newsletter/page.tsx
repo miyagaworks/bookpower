@@ -55,11 +55,11 @@ export default function NewsletterAdmin() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // まずUTF-8で読み込んでみて、文字化けしていたらShift-JISで再読み込み
     const reader = new FileReader();
-    reader.onload = (event) => {
-      const text = event.target?.result as string;
-      const lines = text.split('\n').filter(line => line.trim());
 
+    const parseCSV = (text: string) => {
+      const lines = text.split('\n').filter(line => line.trim());
       const dataLines = lines.slice(1);
 
       const parsed = dataLines.map((line, index) => {
@@ -83,8 +83,28 @@ export default function NewsletterAdmin() {
       setFilteredData(parsed);
     };
 
-    // Shift-JIS対応のため、まずUTF-8で試して、文字化けしていたらShift-JISで再読み込み
-    reader.readAsText(file, 'Shift-JIS');
+    reader.onload = (event) => {
+      const text = event.target?.result as string;
+
+      // 文字化けチェック: 日本語の文字コード範囲に含まれるか確認
+      const hasValidJapanese = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/.test(text);
+
+      if (hasValidJapanese) {
+        // UTF-8で正常に読めた
+        parseCSV(text);
+      } else {
+        // 文字化けしているので、Shift-JISで再読み込み
+        const readerShiftJIS = new FileReader();
+        readerShiftJIS.onload = (e) => {
+          const textShiftJIS = e.target?.result as string;
+          parseCSV(textShiftJIS);
+        };
+        readerShiftJIS.readAsText(file, 'Shift-JIS');
+      }
+    };
+
+    // 最初はUTF-8で読み込み
+    reader.readAsText(file, 'UTF-8');
   };
 
   const applyFilters = () => {
