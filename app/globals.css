@@ -76,6 +76,7 @@
   p ruby rt {
     font-size: 0.4em !important;
     font-weight: 600 !important;
+    margin-bottom: 0.3em !important;
   }
 
   /* スマホでのruby間隔調整 */
