@@ -79,6 +79,13 @@
     padding-bottom: 0.3em;
     line-height: 1;
   }
+
+  /* スマホでのruby間隔調整 */
+  @media (max-width: 767px) {
+    .ruby-tight ruby rt {
+      margin-bottom: -1.5em;
+    }
+  }
 }
 
 @layer components {

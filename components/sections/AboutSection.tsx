@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
         @media (max-width: 767px) {
           h2 ruby rt,
           h3 ruby rt {
-            margin-bottom: -0.5em;
+            margin-bottom: -0.8em;
           }
         }
         ruby rt {
