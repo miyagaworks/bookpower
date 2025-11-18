@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: SITE_INFO.description,
   keywords: ["出版", "著力", "経営者", "Kindle", "セルフ出版", "ビジネス書", "権威性"],
   authors: [{ name: SITE_INFO.companyName }],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/logo.svg',
+  },
   openGraph: {
     title: `${SITE_INFO.title} | ${SITE_INFO.subtitle}`,
     description: SITE_INFO.description,
@@ -65,6 +69,50 @@ export default function RootLayout({
             unicode-range: U+4E00-9FFF, U+3040-309F, U+30A0-30FF;
           }
         `}</style>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": SITE_INFO.companyName,
+              "alternateName": SITE_INFO.title,
+              "url": SITE_INFO.url,
+              "logo": `${SITE_INFO.url}/logo.svg`,
+              "description": SITE_INFO.description,
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "JP",
+                "addressRegion": "広島県",
+                "addressLocality": "広島市安佐南区",
+                "streetAddress": "山本2-3-35"
+              },
+              "telephone": SITE_INFO.companyPhone,
+              "sameAs": []
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": SITE_INFO.title,
+              "alternateName": SITE_INFO.subtitle,
+              "url": SITE_INFO.url,
+              "description": SITE_INFO.description,
+              "publisher": {
+                "@type": "Organization",
+                "name": SITE_INFO.companyName,
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": `${SITE_INFO.url}/logo.svg`
+                }
+              }
+            })
+          }}
+        />
       </head>
       <body>
         {process.env.NEXT_PUBLIC_GA_ID && (
