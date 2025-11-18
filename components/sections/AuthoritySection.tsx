@@ -16,6 +16,9 @@ const AuthoritySection: React.FC = () => {
           h3 ruby rt {
             margin-bottom: -0.5em;
           }
+          .ruby-gap ruby rt {
+            margin-bottom: -1.5em !important;
+          }
         }
         ruby rt {
           margin-bottom: 0.3em;
@@ -143,7 +146,7 @@ const AuthoritySection: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-12 md:p-12 border-2 border-primary/10">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center ruby-gap">
               一般認識のギャップが、<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600 }}>ちょりょく</rt></ruby>の源泉
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
