@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
             あなたは「<ruby>著力<rt>ちょりょく</rt></ruby>」を知っていますか？
           </h2>
-          <div className="bg-primary text-white py-6 px-8 rounded-2xl max-w-4xl mx-auto shadow-2xl">
+          <div className="bg-primary text-white py-6 px-8 md:px-12 rounded-2xl max-w-4xl mx-auto shadow-2xl">
             <p className="text-2xl md:text-5xl font-bold text-justify leading-relaxed">
               <ruby>著力<rt>ちょりょく</rt></ruby>とは、著書を持つことで得られる<span className="text-gold text-4xl md:text-7xl">大きな影響力</span>のこと
             </p>
