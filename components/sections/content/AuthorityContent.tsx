@@ -217,42 +217,27 @@ const AuthorityContent: React.FC = () => {
           <h3 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
             衝撃的な事実
           </h3>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-10">
-            <div className="text-center bg-white/10 rounded-xl p-6 md:p-8">
-              <p className="text-6xl md:text-7xl font-bold text-gold mb-4">
-                90%
-              </p>
-              <p className="text-base md:text-lg font-semibold leading-relaxed">
-                の人はあなたの本を
-                <br />
-                読まない
-              </p>
-            </div>
-            <div className="text-center bg-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-center">
-              <p className="text-5xl md:text-6xl font-bold text-gold mb-4">
-                でも
-              </p>
-              <p className="text-base md:text-lg font-semibold">それでいい</p>
-            </div>
-            <div className="text-center bg-white/10 rounded-xl p-6 md:p-8">
-              <p className="text-6xl md:text-7xl font-bold text-gold mb-4">
-                100%
-              </p>
-              <p className="text-base md:text-lg font-semibold leading-relaxed">
-                の人が「著者」という
-                <br />
-                事実を認識する
-              </p>
-            </div>
+          <div className="text-center mb-8">
+            <h4 className="text-2xl md:text-3xl font-bold mb-6">
+              実は、意外なことに...
+            </h4>
           </div>
-          <div className="bg-white/5 rounded-xl p-6 md:p-8 border-2 border-white/20">
-            <p className="text-justify text-lg md:text-xl font-bold leading-relaxed">
-              重要なのは「著者である」という事実。
-              <br className="hidden md:block" />
-              内容を精読する人は少数派でも、
-              <span className="text-gold text-xl md:text-2xl">
-                権威性の効果は絶大
-              </span>
+
+          <div className="bg-gradient-to-br from-emerald-700 to-emerald-900 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-lg">
+            <p className="text-xl md:text-2xl text-white mb-6 leading-relaxed text-justify">
+              本の内容をじっくり読む方は、<br />
+              それほど多くありません。
+            </p>
+
+            <p className="text-xl md:text-2xl text-white mb-6 leading-relaxed text-justify">
+              でも、大切なのは<br />
+              <span className="text-gold font-bold">「著者である」という事実そのもの</span>。
+            </p>
+
+            <p className="text-xl md:text-2xl text-white leading-relaxed text-justify">
+              たとえ全てを読まれなくても、<br />
+              「この方は本を書いている」という認識が、<br />
+              <span className="text-gold font-bold">信頼と安心感を生み出します</span>。
             </p>
           </div>
         </div>
