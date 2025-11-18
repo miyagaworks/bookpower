@@ -43,9 +43,28 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Shippori+Mincho+B1:wght@400;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&display=swap"
           rel="stylesheet"
+          media="print"
         />
+        <style>{`
+          @font-face {
+            font-family: 'Noto Serif JP';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/notoserifjp/v28/xn77YHs72GKoTvER4Gn3b5eMZBaPRkgfU8fEwb0.woff2) format('woff2');
+            unicode-range: U+4E00-9FFF, U+3040-309F, U+30A0-30FF;
+          }
+          @font-face {
+            font-family: 'Noto Serif JP';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/notoserifjp/v28/xn77YHs72GKoTvER4Gn3b5eMZBaPRmAfU8fEwb0.woff2) format('woff2');
+            unicode-range: U+4E00-9FFF, U+3040-309F, U+30A0-30FF;
+          }
+        `}</style>
       </head>
       <body>
         {process.env.NEXT_PUBLIC_GA_ID && (

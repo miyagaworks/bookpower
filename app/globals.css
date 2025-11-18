@@ -37,7 +37,7 @@
 
   /* 見出しは明朝体で力強く */
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Serif JP", "Shippori Mincho B1", "源ノ明朝", "Source Han Serif", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W6", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W6", "Hiragino Mincho ProN", serif;
     font-weight: 900;
     line-height: 1.4;
     letter-spacing: 0.02em;
