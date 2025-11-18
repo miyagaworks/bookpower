@@ -69,21 +69,22 @@
     font-weight: 700;
   }
 
-  /* ルビと漢字の間のスペース調整 */
-  ruby.ruby-spaced {
-    ruby-position: under;
-    ruby-position: over;
-  }
-
-  ruby.ruby-spaced rt {
-    padding-bottom: 0.3em;
-    line-height: 1;
+  /* ルビと漢字の間のスペース調整 - 全体統一 */
+  h1 ruby rt,
+  h2 ruby rt,
+  h3 ruby rt,
+  p ruby rt {
+    font-size: 0.4em !important;
+    font-weight: 600 !important;
   }
 
   /* スマホでのruby間隔調整 */
   @media (max-width: 767px) {
-    .ruby-tight ruby rt {
-      margin-bottom: -1.5em;
+    h1 ruby rt,
+    h2 ruby rt,
+    h3 ruby rt,
+    p ruby rt {
+      margin-bottom: -0.5em !important;
     }
   }
 }

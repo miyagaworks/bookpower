@@ -1,31 +1,20 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Container from '../ui/Container';
 import { FaCrown, FaUserGraduate, FaBullhorn, FaBook } from 'react-icons/fa';
 
 const AboutSection: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   return (
     <section id="about" className="py-16 md:py-24 bg-gradient-to-b from-white via-background to-white">
       <Container>
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-            あなたは「<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, marginBottom: isMobile ? '0.1em' : '0.2em' }}>ちょりょく</rt></ruby>」を知っていますか？
+            あなたは「<ruby>著力<rt>ちょりょく</rt></ruby>」を知っていますか？
           </h2>
           <div className="bg-primary text-white py-6 px-8 rounded-2xl max-w-4xl mx-auto shadow-2xl">
-            <p className="text-2xl md:text-5xl font-bold text-justify leading-relaxed" style={{ lineHeight: isMobile ? 1.8 : 1.4 }}>
-              <ruby style={{ display: 'inline-block', position: 'relative' }}>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, position: 'absolute', top: isMobile ? '-0.5em' : '-1em', left: 0, width: '100%', textAlign: 'center' }}>ちょりょく</rt></ruby>とは、著書を持つことで得られる<span className="text-gold text-4xl md:text-7xl">大きな影響力</span>のこと
+            <p className="text-2xl md:text-5xl font-bold text-justify leading-relaxed">
+              <ruby>著力<rt>ちょりょく</rt></ruby>とは、著書を持つことで得られる<span className="text-gold text-4xl md:text-7xl">大きな影響力</span>のこと
             </p>
           </div>
         </div>
@@ -70,7 +59,7 @@ const AboutSection: React.FC = () => {
         <div className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white rounded-2xl p-8 md:p-12 shadow-2xl border-4 border-gold">
           <div className="flex items-center gap-3 mb-8">
             <FaBook className="text-4xl md:text-5xl text-gold" />
-            <h3 className="text-3xl md:text-4xl font-bold" style={{ marginTop: '-0.7em' }}>なぜ今、<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600 }}>ちょりょく</rt></ruby>が必要なのか</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">なぜ今、<ruby>著力<rt>ちょりょく</rt></ruby>が必要なのか</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

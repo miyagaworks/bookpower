@@ -58,7 +58,7 @@ const DetailedContentSection: React.FC = () => {
           <div className="relative z-10 px-4 py-8 md:px-8 md:py-12">
             <div className="text-center mb-6 md:mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                <ruby className="ruby-spaced">著力<rt style={{ fontSize: '0.35em' }}>ちょりょく</rt></ruby>がもたらす３つの変化を詳しく知る
+                <ruby>著力<rt>ちょりょく</rt></ruby>がもたらす３つの変化を詳しく知る
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-accent-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 それぞれのタブをクリックして、詳細をご覧ください

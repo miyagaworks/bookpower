@@ -28,19 +28,7 @@ const BenefitsSection: React.FC = () => {
             style={{ fontWeight: 900 }}
           >
             <span className="block md:inline" style={{ marginLeft: "-0.6em" }}>
-              「
-              <ruby>
-                著力
-                <rt
-                  style={{
-                    fontSize: "0.4em",
-                    fontWeight: 600,
-                  }}
-                >
-                  ちょりょく
-                </rt>
-              </ruby>
-              」がもたらす
+              「<ruby>著力<rt>ちょりょく</rt></ruby>」がもたらす
             </span>
             <span className="block md:inline">３つの変化</span>
           </h2>

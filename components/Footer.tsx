@@ -63,17 +63,7 @@ const Footer: React.FC = () => {
           {/* 著力について */}
           <div className="md:col-span-4">
             <h3 className="text-xl md:text-3xl font-bold mb-4">
-              <ruby>
-                著力
-                <rt
-                  style={{
-                    fontSize: "0.4em",
-                    fontWeight: 600,
-                  }}
-                >
-                  ちょりょく
-                </rt>
-              </ruby>
+              <ruby>著力<rt>ちょりょく</rt></ruby>
             </h3>
             <p className="text-gray-200 mb-4">{SITE_INFO.subtitle}</p>
             <p className="text-gray-400 text-sm leading-relaxed text-justify mb-8">
