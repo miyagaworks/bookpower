@@ -1,11 +1,22 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Container from '../ui/Container';
 import { FaQuoteLeft, FaCheckCircle, FaBriefcase, FaBalanceScale, FaUsers, FaTrophy, FaInfinity, FaChartLine } from 'react-icons/fa';
 
 const AuthoritySection: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section
       id="authority"
@@ -133,8 +144,8 @@ const AuthoritySection: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-12 md:p-12 border-2 border-primary/10">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center ruby-tight">
-              一般認識のギャップが、<ruby>著力<rt style={{ fontSize: '0.4em', fontWeight: 600 }}>ちょりょく</rt></ruby>の源泉
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center" style={{ lineHeight: 2 }}>
+              一般認識のギャップが、<ruby style={{ display: 'inline-block', position: 'relative' }}>著力<rt style={{ fontSize: '0.4em', fontWeight: 600, position: 'absolute', top: '0.5em', left: 0, width: '100%', textAlign: 'center' }}>ちょりょく</rt></ruby>の源泉
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
