@@ -78,14 +78,21 @@ export default function RootLayout({
               "name": SITE_INFO.companyName,
               "alternateName": SITE_INFO.title,
               "url": SITE_INFO.url,
-              "logo": `${SITE_INFO.url}/logo.svg`,
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${SITE_INFO.url}/logo.svg`,
+                "width": 300,
+                "height": 110
+              },
+              "image": `${SITE_INFO.url}/og-image.png`,
               "description": SITE_INFO.description,
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "JP",
                 "addressRegion": "広島県",
                 "addressLocality": "広島市安佐南区",
-                "streetAddress": "山本2-3-35"
+                "streetAddress": "山本2-3-35",
+                "postalCode": "731-0137"
               },
               "telephone": SITE_INFO.companyPhone,
               "sameAs": []
