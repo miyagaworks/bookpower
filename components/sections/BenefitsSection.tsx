@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Container from '../ui/Container';
@@ -9,6 +11,16 @@ const BenefitsSection: React.FC = () => {
       id="benefits"
       className="py-14 md:py-20 md:pb-30 bg-primary text-white"
     >
+      <style jsx>{`
+        @media (max-width: 767px) {
+          h2 ruby rt {
+            margin-bottom: -0.5em;
+          }
+        }
+        ruby rt {
+          margin-bottom: 0.3em;
+        }
+      `}</style>
       <Container>
         <div className="text-center mb-12 md:mb-16">
           <h2
@@ -23,7 +35,6 @@ const BenefitsSection: React.FC = () => {
                   style={{
                     fontSize: "0.4em",
                     fontWeight: 600,
-                    marginBottom: "0.3em",
                   }}
                 >
                   ちょりょく

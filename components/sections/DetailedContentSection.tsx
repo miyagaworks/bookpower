@@ -27,6 +27,16 @@ const DetailedContentSection: React.FC = () => {
 
   return (
     <section className="pt-8 md:pt-16 pb-16 md:pb-24 bg-background">
+      <style jsx>{`
+        @media (max-width: 767px) {
+          h2 ruby rt {
+            margin-bottom: -0.5em;
+          }
+        }
+        ruby rt {
+          margin-bottom: 0.2em;
+        }
+      `}</style>
       <Container>
         {/* タブナビゲーション */}
         <div id="tab-navigation" className="mb-12 md:mb-16 relative rounded-xl md:rounded-2xl overflow-hidden">
