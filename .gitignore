@@ -42,3 +42,6 @@ next-env.d.ts
 
 # color preview
 color-preview.html
+
+# newsletter data
+/data

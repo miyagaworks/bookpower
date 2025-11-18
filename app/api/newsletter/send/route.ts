@@ -1,7 +1,25 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { readFile } from 'fs/promises';
+import { existsSync } from 'fs';
+import path from 'path';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+// 配信停止リストを取得
+async function getUnsubscribedList(): Promise<string[]> {
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'unsubscribed.json');
+    if (!existsSync(filePath)) {
+      return [];
+    }
+    const data = await readFile(filePath, 'utf-8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('配信停止リスト読み込みエラー:', error);
+    return [];
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -25,37 +43,56 @@ export async function POST(request: NextRequest) {
 
     let sent = 0;
     let failed = 0;
+    let skipped = 0;
     const errors: any[] = [];
 
+    // 配信停止リストを取得
+    const unsubscribedList = await getUnsubscribedList();
+
     for (const recipient of recipients) {
+      // 配信停止リストにある場合はスキップ
+      if (unsubscribedList.includes(recipient.email)) {
+        skipped++;
+        console.log(`スキップ: ${recipient.email} (配信停止済み)`);
+        continue;
+      }
       try {
         // 本文の変数を置換
+        const standardBorder = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━'; // 28文字の太い線（署名と同じ）
         const personalizedBody = emailBody
           .replace(/{代表}/g, recipient.representative || '◯◯')
           .replace(/{会社}/g, recipient.company || '御社')
-          .replace(/{業種}/g, recipient.industry || '貴業界');
+          .replace(/{業種}/g, recipient.industry || '貴業界')
+          .replace(/{姓}/g, recipient.lastName || '◯◯')
+          .replace(/{名}/g, recipient.firstName || '◯◯')
+          .replace(/[─━―−‐]{5,}/g, standardBorder) // 5文字以上の区切り線を統一
+          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); // **太字** を <strong> に変換
 
         const html = `
           <!DOCTYPE html>
           <html>
           <head>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
           </head>
-          <body style="font-family: sans-serif; line-height: 1.8; color: #333;">
+          <body style="font-family: sans-serif; line-height: 1.8; color: #333; font-size: 16px;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-              <div style="white-space: pre-wrap;">${personalizedBody}</div>
+              <div style="white-space: pre-wrap; font-size: 16px;">${personalizedBody}</div>
 
-              <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-
-              <div style="font-size: 13px; color: #666;">
-                <p style="margin: 5px 0;"><strong>BookPower 出版代行サービス</strong></p>
-                <p style="margin: 5px 0;">〒731-0137 広島県広島市安佐南区山本2-3-35</p>
-                <p style="margin: 5px 0;">TEL: 082-209-0181</p>
-                <p style="margin: 5px 0;">担当：宮川</p>
-                <p style="margin: 15px 0 5px 0; font-size: 12px;">
-                  このメールは、以前お取引のあったお客様へお送りしております。
-                </p>
-                <p style="margin: 5px 0;">
+              <div style="color: #666; line-height: 1.8; margin-top: 40px; font-size: 14px;">
+                <p style="margin: 0; font-size: 14px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p style="margin: 8px 0 5px 0; font-size: 14px;"><strong>宮川 清実 | Kiyomi Miyagawa</strong></p>
+                <p style="margin: 5px 0; font-size: 14px;">著力運営チーム / 株式会社Senrigan</p>
+                <p style="margin: 8px 0 0 0; font-size: 14px;">E info@bookpower.jp</p>
+                <p style="margin: 3px 0; font-size: 14px;">W https://bookpower.jp（出版代行）</p>
+                <p style="margin: 3px 0; font-size: 14px;">W https://senrigan.systems（システム開発）</p>
+                <p style="margin: 3px 0; font-size: 14px;">W https://www.sns-share.com（デジタル名刺）</p>
+                <p style="margin: 3px 0; font-size: 14px;">W https://kigasuru.com（ゴルフアプリ）</p>
+                <p style="margin: 8px 0 0 0; font-size: 14px;">A 広島県広島市安佐南区山本2-3-35</p>
+                <p style="margin: 10px 0; font-size: 14px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p style="margin: 8px 0; font-weight: bold; color: #333; font-size: 14px;">著力 - あなたの名前が、Amazonに載る</p>
+                <p style="margin: 10px 0; font-size: 14px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p style="margin: 20px 0 5px 0;">
                   <a href="https://bookpower.jp/unsubscribe?email=${encodeURIComponent(recipient.email)}"
                      style="color: #0070f3; text-decoration: none;">
                     配信停止はこちら
@@ -68,7 +105,7 @@ export async function POST(request: NextRequest) {
         `;
 
         await resend.emails.send({
-          from: 'BookPower出版サポート <newsletter@bookpower.jp>',
+          from: '「著力」出版サポート <newsletter@bookpower.jp>',
           to: recipient.email,
           subject: subject,
           html: html,
@@ -96,6 +133,7 @@ export async function POST(request: NextRequest) {
       success: true,
       sent,
       failed,
+      skipped,
       total: recipients.length,
       errors: failed > 0 ? errors : undefined
     });
