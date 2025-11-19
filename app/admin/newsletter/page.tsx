@@ -474,7 +474,8 @@ export default function NewsletterAdmin() {
                       <p style={{ margin: '8px 0 5px 0' }} className="font-semibold text-gray-800">宮川 清実 | Kiyomi Miyagawa</p>
                       <p style={{ margin: '5px 0' }}>著力運営チーム / 株式会社Senrigan</p>
                       <p style={{ margin: '8px 0 0 0' }}>E info@bookpower.jp</p>
-                      <p style={{ margin: '3px 0' }}>W https://bookpower.jp（出版代行）</p>
+                      <p style={{ margin: '3px 0 0 0' }}>M 090-1686-8728</p>
+                      <p style={{ margin: '8px 0 0 0' }}>W https://bookpower.jp（出版代行）</p>
                       <p style={{ margin: '3px 0' }}>W https://senrigan.systems（システム開発）</p>
                       <p style={{ margin: '3px 0' }}>W https://www.sns-share.com（デジタル名刺）</p>
                       <p style={{ margin: '3px 0' }}>W https://kigasuru.com（ゴルフアプリ）</p>
