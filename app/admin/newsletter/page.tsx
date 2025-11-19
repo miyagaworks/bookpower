@@ -473,13 +473,13 @@ export default function NewsletterAdmin() {
                       <p style={{ margin: 0 }}>━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
                       <p style={{ margin: '8px 0 5px 0' }} className="font-semibold text-gray-800">宮川 清実 | Kiyomi Miyagawa</p>
                       <p style={{ margin: '5px 0' }}>著力運営チーム / 株式会社Senrigan</p>
-                      <p style={{ margin: '8px 0 0 0' }}>E info@bookpower.jp</p>
-                      <p style={{ margin: '3px 0 0 0' }}>M 090-1686-8728</p>
-                      <p style={{ margin: '8px 0 0 0' }}>W https://bookpower.jp（出版代行）</p>
-                      <p style={{ margin: '3px 0' }}>W https://senrigan.systems（システム開発）</p>
-                      <p style={{ margin: '3px 0' }}>W https://www.sns-share.com（デジタル名刺）</p>
-                      <p style={{ margin: '3px 0' }}>W https://kigasuru.com（ゴルフアプリ）</p>
-                      <p style={{ margin: '8px 0 0 0' }}>A 広島県広島市安佐南区山本2-3-35</p>
+                      <p style={{ margin: '8px 0 0 0' }}><strong className="text-black">E</strong> info@bookpower.jp</p>
+                      <p style={{ margin: '3px 0 0 0' }}><strong className="text-black">M</strong> 090-1686-8728</p>
+                      <p style={{ margin: '8px 0 0 0' }}><strong className="text-black">W</strong> https://bookpower.jp（出版代行）</p>
+                      <p style={{ margin: '3px 0' }}><strong className="text-black">W</strong> https://senrigan.systems（システム開発）</p>
+                      <p style={{ margin: '3px 0' }}><strong className="text-black">W</strong> https://www.sns-share.com（デジタル名刺）</p>
+                      <p style={{ margin: '3px 0' }}><strong className="text-black">W</strong> https://kigasuru.com（ゴルフアプリ）</p>
+                      <p style={{ margin: '8px 0 0 0' }}><strong className="text-black">A</strong> 広島県広島市安佐南区山本2-3-35</p>
                       <p style={{ margin: '10px 0' }}>━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
                       <p style={{ margin: '8px 0' }} className="font-semibold text-gray-800">著力 - あなたの名前が、Amazonに載る</p>
                       <p style={{ margin: '10px 0' }}>━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
