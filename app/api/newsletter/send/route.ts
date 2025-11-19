@@ -84,7 +84,8 @@ export async function POST(request: NextRequest) {
                 <p style="margin: 8px 0 5px 0; font-size: 14px;"><strong>宮川 清実 | Kiyomi Miyagawa</strong></p>
                 <p style="margin: 5px 0; font-size: 14px;">著力運営チーム / 株式会社Senrigan</p>
                 <p style="margin: 8px 0 0 0; font-size: 14px;">E info@bookpower.jp</p>
-                <p style="margin: 3px 0; font-size: 14px;">W https://bookpower.jp（出版代行）</p>
+                <p style="margin: 3px 0 0 0; font-size: 14px;">M 090-1686-8728</p>
+                <p style="margin: 8px 0 0 0; font-size: 14px;">W https://bookpower.jp（出版代行）</p>
                 <p style="margin: 3px 0; font-size: 14px;">W https://senrigan.systems（システム開発）</p>
                 <p style="margin: 3px 0; font-size: 14px;">W https://www.sns-share.com（デジタル名刺）</p>
                 <p style="margin: 3px 0; font-size: 14px;">W https://kigasuru.com（ゴルフアプリ）</p>
