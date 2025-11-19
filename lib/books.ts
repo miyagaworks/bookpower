@@ -60,4 +60,14 @@ export const PUBLISHED_BOOKS = [
     rating: 4.8,
     reviews: 615,
   },
+  {
+    id: 8,
+    title: '嘘: キャラクターに命を吹き込むデザイン哲学',
+    author: '日向 あおば',
+    asin: 'B0DJ84G1N6',
+    coverImage: '/images/books/book8.webp',
+    amazonUrl: 'https://amzn.asia/d/65LXxtY',
+    rating: 4.5,
+    reviews: 0,
+  },
 ] as const;
