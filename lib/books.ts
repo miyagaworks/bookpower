@@ -82,7 +82,7 @@ export const PUBLISHED_BOOKS = [
   },
   {
     id: 10,
-    title: '著力',
+    title: '著力: あなたの名前が、Amazonに載る',
     author: '宮川 清実',
     asin: 'B0FXEZ2P',
     coverImage: '/images/books/book10.webp',
