@@ -36,6 +36,7 @@ export const SITE_INFO = {
   social: {
     x: 'https://x.com/BookPowerJp',
     note: 'https://note.com/bookpower',
+    line: 'https://lin.ee/0e40zSi',
   },
 } as const;
 

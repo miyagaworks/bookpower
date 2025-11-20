@@ -3,7 +3,7 @@
 import React from 'react';
 import Container from './ui/Container';
 import { SITE_INFO, NAV_ITEMS } from '@/lib/constants';
-import { FaCrown, FaUserGraduate, FaBullhorn, FaStickyNote } from 'react-icons/fa';
+import { FaCrown, FaUserGraduate, FaBullhorn, FaStickyNote, FaLine } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
@@ -82,6 +82,15 @@ const Footer: React.FC = () => {
               >
                 <FaStickyNote className="text-lg" />
                 <span>note</span>
+              </a>
+              <a
+                href={SITE_INFO.social.line}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gold/80 hover:text-gold-light transition-colors text-sm"
+              >
+                <FaLine className="text-lg" />
+                <span>LINE</span>
               </a>
             </div>
           </div>
