@@ -3,7 +3,8 @@
 import React from 'react';
 import Container from './ui/Container';
 import { SITE_INFO, NAV_ITEMS } from '@/lib/constants';
-import { FaCrown, FaUserGraduate, FaBullhorn } from 'react-icons/fa';
+import { FaCrown, FaUserGraduate, FaBullhorn, FaStickyNote } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,7 @@ const Footer: React.FC = () => {
         }
       `}</style>
       <Container>
-        <div className="py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="py-12 grid grid-cols-1 md:grid-cols-6 gap-8">
           {/* サイトマップ */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold mb-4">サイトマップ</h3>
@@ -56,6 +57,31 @@ const Footer: React.FC = () => {
                 className="block text-gold/80 hover:text-gold-light transition-colors"
               >
                 特定商取引法に基づく表記
+              </a>
+            </div>
+          </div>
+
+          {/* SNS */}
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-bold mb-4">SNS</h3>
+            <div className="space-y-3">
+              <a
+                href={SITE_INFO.social.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gold/80 hover:text-gold-light transition-colors text-sm"
+              >
+                <FaXTwitter className="text-lg" />
+                <span>X (Twitter)</span>
+              </a>
+              <a
+                href={SITE_INFO.social.note}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gold/80 hover:text-gold-light transition-colors text-sm"
+              >
+                <FaStickyNote className="text-lg" />
+                <span>note</span>
               </a>
             </div>
           </div>

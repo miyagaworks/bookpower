@@ -33,6 +33,10 @@ export const SITE_INFO = {
   companyName: '株式会社Senrigan',
   companyAddress: '広島県広島市安佐南区山本2-3-35',
   companyPhone: '082-209-0181',
+  social: {
+    x: 'https://x.com/BookPowerJp',
+    note: 'https://note.com/bookpower',
+  },
 } as const;
 
 // 料金プラン
