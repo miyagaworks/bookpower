@@ -1,22 +1,8 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
 
 export default function GoogleAnalytics({ gaId }: { gaId: string }) {
-  const [shouldLoad, setShouldLoad] = useState(false);
-
-  useEffect(() => {
-    // 本番環境のみで読み込む（localhost除外）
-    const isProduction = window.location.hostname !== 'localhost' &&
-                        window.location.hostname !== '127.0.0.1';
-    setShouldLoad(isProduction);
-  }, []);
-
-  if (!shouldLoad) {
-    return null;
-  }
-
   return (
     <>
       <Script
